@@ -21,8 +21,9 @@ namespace ProductApps
     public partial class MainWindow : Window
     {
         Product cProduct;
-        decimal total, subtotal;
+        decimal subtotalDelivery, subtotalWrap, subtotal;
         decimal DELIVERY_FEE = 25;
+        decimal WRAP_FEE = 5;
         public MainWindow()
         {
             InitializeComponent();
@@ -41,8 +42,10 @@ namespace ProductApps
                 MessageBox.Show("Enter data again", "Data Entry Error");
             }
             subtotal = cProduct.TotalPayment;
-            total = subtotal + DELIVERY_FEE;
-            totalChargeTextBlock.Text = Convert.ToString(total);
+            subtotalDelivery = subtotal + DELIVERY_FEE;
+            subtotalWrap = subtotalDelivery + WRAP_FEE;
+            totalChargeTextBlock.Text = Convert.ToString(subtotalDelivery);
+            totalChargeWrap.Text = Convert.ToString(subtotalWrap);
         }
 
         private void clearButton_Click(object sender, RoutedEventArgs e)
@@ -51,6 +54,8 @@ namespace ProductApps
             priceTextBox.Text = "";
             quantityTextBox.Text = "";
             totalPaymentTextBlock.Text = "";
+            totalChargeTextBlock.Text = "";
+            totalChargeWrap.Text = "";
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e)

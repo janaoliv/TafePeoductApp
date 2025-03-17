@@ -11,7 +11,7 @@
         <Label Content="Price $:" HorizontalAlignment="Left" Height="30" Margin="46,78,0,0" VerticalAlignment="Top" Width="61"/>
         <Label Content="Quantity:" HorizontalAlignment="Left" Height="30" Margin="48,113,0,0" VerticalAlignment="Top" Width="69" RenderTransformOrigin="0.371,0.498"/>
         <Label Content="Total Payment $:" HorizontalAlignment="Left" Height="30" Margin="46,160,0,0" VerticalAlignment="Top" Width="96"/>
-        <Label Content="Total Charge with delivery charge ($25):" HorizontalAlignment="Left" Height="30" Margin="46,220,0,0" 
+        <Label Content="Total Charge with delivery charge ($25):" HorizontalAlignment="Left" Height="30" Margin="10,209,0,0" 
        VerticalAlignment="Top" HorizontalContentAlignment="Left" />
         
 
@@ -22,8 +22,10 @@
         <Button Name="calculateButton" Content="_Calculate" HorizontalAlignment="Left" Height="37" Margin="327,152,0,0" VerticalAlignment="Top" Width="122" Click="calculateButton_Click"/>
         <Button Name="clearButton" Content="C_lear" HorizontalAlignment="Left" Height="34" Margin="327,209,0,0" VerticalAlignment="Top" Width="122" Click="clearButton_Click"/>
         <Button Name="closeButton" Content="Cl_ose" HorizontalAlignment="Left" Height="34" Margin="327,264,0,0" VerticalAlignment="Top" Width="122" Click="closeButton_Click" Grid.RowSpan="2"/>
-        <TextBlock HorizontalAlignment="Left" x:Name="totalChargeTextBlock" Margin="132,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24"  Width="77" />
-
+        <TextBlock HorizontalAlignment="Left" x:Name="totalChargeTextBlock" Margin="233,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24"  Width="77" />
+        <Label Content="Total Charge with wrapping charge ($5):" HorizontalAlignment="Left" Height="30" Margin="10,249,0,0" 
+       VerticalAlignment="Top" HorizontalContentAlignment="Left" />
+        <TextBlock HorizontalAlignment="Left" x:Name="totalChargeWrap" Height="30" Margin="242,249,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
 
     </Grid>
 </Window>
