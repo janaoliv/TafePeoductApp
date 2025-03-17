@@ -21,9 +21,10 @@ namespace ProductApps
     public partial class MainWindow : Window
     {
         Product cProduct;
-        decimal subtotalDelivery, subtotalWrap, subtotal;
+        decimal subtotalDelivery, subtotalWrap, subtotal, GSTTotal;
         decimal DELIVERY_FEE = 25;
         decimal WRAP_FEE = 5;
+        decimal GST_FEE = 1.1M;
         public MainWindow()
         {
             InitializeComponent();
@@ -44,8 +45,10 @@ namespace ProductApps
             subtotal = cProduct.TotalPayment;
             subtotalDelivery = subtotal + DELIVERY_FEE;
             subtotalWrap = subtotalDelivery + WRAP_FEE;
+            GSTTotal = subtotalWrap * GST_FEE;
             totalChargeTextBlock.Text = Convert.ToString(subtotalDelivery);
             totalChargeWrap.Text = Convert.ToString(subtotalWrap);
+            totalChargeWithGST.Text = Convert.ToString(GSTTotal);
         }
 
         private void clearButton_Click(object sender, RoutedEventArgs e)

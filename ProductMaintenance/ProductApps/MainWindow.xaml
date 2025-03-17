@@ -26,6 +26,8 @@
         <Label Content="Total Charge with wrapping charge ($5):" HorizontalAlignment="Left" Height="30" Margin="10,249,0,0" 
        VerticalAlignment="Top" HorizontalContentAlignment="Left" />
         <TextBlock HorizontalAlignment="Left" x:Name="totalChargeWrap" Height="30" Margin="242,249,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,4.333,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Total Charge with GST:" VerticalAlignment="Top" Width="208"/>
+        <TextBlock HorizontalAlignment="Left" x:Name="totalChargeWithGST" Height="17" Margin="233,6.333,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
 
     </Grid>
 </Window>
