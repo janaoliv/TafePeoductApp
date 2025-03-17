@@ -21,7 +21,8 @@ namespace ProductApps
     public partial class MainWindow : Window
     {
         Product cProduct;
-
+        decimal total, subtotal;
+        decimal DELIVERY_FEE = 25;
         public MainWindow()
         {
             InitializeComponent();
@@ -39,6 +40,9 @@ namespace ProductApps
             {
                 MessageBox.Show("Enter data again", "Data Entry Error");
             }
+            subtotal = cProduct.TotalPayment;
+            total = subtotal + DELIVERY_FEE;
+            totalChargeTextBlock.Text = Convert.ToString(total);
         }
 
         private void clearButton_Click(object sender, RoutedEventArgs e)
